@@ -32,7 +32,7 @@ decreaseItemButton.addEventListener("click", () => {
 });
 
 increaseDigitButton.addEventListener("click", () => {
-  if(digitValue > 0) {
+  if (digitValue > 0) {
     digitValue += 1;
     digitNumber.textContent = digitValue;
     generateQuestionListHTML();
@@ -40,7 +40,7 @@ increaseDigitButton.addEventListener("click", () => {
 });
 
 decreaseDigitButton.addEventListener("click", () => {
-  if(digitValue > 1) {
+  if (digitValue > 1) {
     digitValue -= 1;
     digitNumber.textContent = digitValue;
     generateQuestionListHTML();
@@ -114,16 +114,20 @@ function checkAnswers() {
           correctAnswer = parseInt(num1) * parseInt(num2);
           break;
         case "÷":
-          correctAnswer = parseInt(num1) / parseInt(num2);
+          const divisionResult = parseInt(num1) / parseInt(num2);
+          correctAnswer = Number.isInteger(divisionResult)
+            ? divisionResult
+            : divisionResult.toFixed(2);
           break;
       }
 
-      if (answer === correctAnswer) {
+      if (parseFloat(answer) === correctAnswer) {
         input.classList.remove("incorrect-answer");
         input.classList.add("correct-answer");
         totalCorrectAnswers++;
         totalCorrectElement.textContent = `Total correct answers: ${totalCorrectAnswers}`;
       } else {
+        console.log(correctAnswer);
         input.classList.remove("correct-answer");
         input.classList.add("incorrect-answer");
       }
