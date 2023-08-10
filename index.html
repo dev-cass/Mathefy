@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon-1.png" type="image/x-icon">
+    <title>Mathefy</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Welcome to Mathefy! Your Ultimate Math Playground for All!</h1>
+        <p> Sharpen your math skills with engaging exercises and become a master of arithmetic. Perfect for learners
+            of all ages.</p>
+    </div>
+    <main>
+        <div class="option-container">
+            <span class="arithmetic-container">
+                <h2 class="sub-head">Choose operator:</h2>
+                <div class="arithmetic-operators">
+                    <span><button class="operator js-operator" data-operator="+">+</button></span>
+                    <button class="operator js-operator" data-operator="-">-</button>
+                    <button class="operator js-operator" data-operator="x">x</button>
+                    <button class="operator js-operator" data-operator="÷">÷</button>
+                </div>
+            </span>
+            <div>
+                <h2 class="sub-head">Number of Items:</h2>
+                <div class="option-col">
+                    <button class="decrease-operator js-decrease-items">-</button>
+                    <p class="js-item-number"></p>
+                    <button class="increase-operator js-increase-items">+</button>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="sub-head">Number of Digits:</h2>
+                <div class="option-col">
+                    <button class="decrease-operator js-decrease-digits">-</button>
+                    <p class="js-digit-number"></p>
+                    <button class="increase-operator js-increase-digits">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="question-container">
+            <div class="shuffle-button-container">
+                <button class="shuffle-button"><img src="./images/shuffle.png" alt=""></button>
+            </div>
+            <div class="question-list js-question-list">
+                
+                
+            </div>
+            <p class="total-correct"></p>
+            <button class="submit-button">Submit</button>
+        </div>
+    </main>
+    <footer>Built and designed by Luis Miguel Cruz
+        © 2023 • All rights reserved</footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
